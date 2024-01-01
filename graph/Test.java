@@ -1,6 +1,5 @@
 package graph;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayDeque;
@@ -8,7 +7,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Test {
-    private int vertices;
+    private int vertice;
     private int edges;
     private DirectedUnweightedGraph graph;
     private boolean[] visited;
@@ -17,13 +16,13 @@ public class Test {
     private int[] path;
     public Test() {
         try(Scanner scanner = new Scanner(new FileInputStream("D:\\JavaProjects\\untitled6\\src\\main\\java\\graph\\data.txt"))) {
-            vertices = scanner.nextInt();
+            vertice = scanner.nextInt();
             edges = scanner.nextInt();
-            graph = new DirectedUnweightedGraph(vertices);
-            visited = new boolean[vertices];
+            graph = new DirectedUnweightedGraph(vertice);
+            visited = new boolean[vertice];
 
             /* Optional */
-            path = new int[vertices];
+            path = new int[vertice];
             for (int i = 0; i < edges; i++) {
                 int a = scanner.nextInt();
                 int b = scanner.nextInt();
