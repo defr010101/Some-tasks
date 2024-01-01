@@ -9,10 +9,14 @@ public class Main {
         deque.add("1");
         deque.add("2");
         deque.add("3");
-	deque.add("4");
+        deque.add("4");
 
-        for (String element : deque.reversed()) {
-            System.out.println(element);
+        print(deque);
+    }
+
+    private static void print(Deque<String> deque) {
+        for (String element : deque) {
+            System.out.println("element from deque: " + element);
         }
     }
 }
