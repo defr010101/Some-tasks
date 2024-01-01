@@ -1,11 +1,14 @@
 package trash;
 
-public class Skobki {
-    private static int counter = 0;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Parentheses {
+    private static List<String> parentheses = new ArrayList<>();
 
     public static void generate(String cur, int open, int closed, int n) {
         if (cur.length() == 2*n) {
-            counter++;
+            parentheses.add(cur);
             return;
         }
         if (open < n) {
@@ -19,6 +22,9 @@ public class Skobki {
 
     public static void main(String[] args) {
         generate("", 0, 0, 4);
-        System.out.println(counter);
+
+        for (String parenthesis : parentheses) {
+            System.out.println(parenthesis);
+        }
     }
 }
