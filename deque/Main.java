@@ -1,7 +1,6 @@
 package deque;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,12 +10,22 @@ public class Main {
         deque.add("3");
         deque.add("4");
 
-        print(deque);
+        //print(deque);
+
+        List<Integer> a = new ArrayList<>(Arrays.asList(5, 12));
+        swap(a, 0, 1);
+        a.forEach(System.out::println);
     }
 
     public static void print(Deque<String> deque) {
         for (String element : deque) {
             System.out.println("element from deque: " + element);
         }
+    }
+
+    public static void swap(List<Integer> a, int i, int j) {
+        int temp = a.get(i);
+        a.set(i, a.get(j));
+        a.set(j, temp);
     }
 }
