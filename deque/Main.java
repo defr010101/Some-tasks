@@ -14,7 +14,7 @@ public class Main {
         print(deque);
     }
 
-    private static void print(Deque<String> deque) {
+    public static void print(Deque<String> deque) {
         for (String element : deque) {
             System.out.println("element from deque: " + element);
         }
