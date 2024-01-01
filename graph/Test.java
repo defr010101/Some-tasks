@@ -7,7 +7,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Test {
-    private int vertice;
+    private int vertices;
     private int edges;
     private DirectedUnweightedGraph graph;
     private boolean[] visited;
@@ -15,14 +15,14 @@ public class Test {
     /* Optional */
     private int[] path;
     public Test() {
-        try(Scanner scanner = new Scanner(new FileInputStream("D:\\JavaProjects\\untitled6\\src\\main\\java\\graph\\data.txt"))) {
-            vertice = scanner.nextInt();
+        try (Scanner scanner = new Scanner(new FileInputStream("D:\\JavaProjects\\untitled6\\src\\main\\java\\graph\\data.txt"))) {
+            vertices = scanner.nextInt();
             edges = scanner.nextInt();
-            graph = new DirectedUnweightedGraph(vertice);
-            visited = new boolean[vertice];
+            graph = new DirectedUnweightedGraph(vertices);
+            visited = new boolean[vertices];
 
             /* Optional */
-            path = new int[vertice];
+            path = new int[vertices];
             for (int i = 0; i < edges; i++) {
                 int a = scanner.nextInt();
                 int b = scanner.nextInt();
