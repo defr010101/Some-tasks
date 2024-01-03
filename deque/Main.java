@@ -17,10 +17,12 @@ public class Main {
         a.forEach(System.out::println);
     }
 
-    public static void print(Deque<String> deque) {
+    public static int print(Deque<String> deque) {
         for (String element : deque) {
             System.out.println("element from deque: " + element);
         }
+
+        return 2;
     }
 
     public static void swap(List<Integer> a, int i, int j) {
